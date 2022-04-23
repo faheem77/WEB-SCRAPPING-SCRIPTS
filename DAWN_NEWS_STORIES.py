@@ -1,11 +1,9 @@
 import requests
 from bs4 import BeautifulSoup, SoupStrainer
-import time
 import pandas as pd
 from tqdm import tqdm
 from multiprocessing import Process, Pool
-import json
-class scrap:
+class Scrap:
   def __init__(self):
     self.data()
   def urls(self):
@@ -48,8 +46,8 @@ class scrap:
     # df.to_csv("DAWN-NEWS-STORIES-on-NO-CONFIDENCE-MOTION.csv", index=True)
 
 if __name__ == '__main__':
-  d= scrap()
-  p = Process(target=d)
+  scrap= Scrap()
+  p = Process(target=scrap)
   p.start()
   p.join()
 
